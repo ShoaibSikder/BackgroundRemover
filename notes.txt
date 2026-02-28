@@ -1,0 +1,23 @@
+step 1 (Create Django project)
+# Create project folder
+mkdir BackgroundRemover
+cd BackgroundRemover
+
+# Create virtual environment
+python -m venv venv
+# Activate it
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+
+# Install Django and DRF
+pip install django djangorestframework django-cors-headers pillow rembg social-auth-app-django
+
+# Start Django project
+django-admin startproject backend .
+
+Step 2 (Create apps)
+cd backend
+python manage.py startapp users
+python manage.py startapp images
